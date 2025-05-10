@@ -2,12 +2,19 @@ name: My workflow
 on: push
 
 jobs:
-  my-first-job:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello, world!"
+    echo-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              run: echo "Hello, world!"
 
-  my-second-job:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Bye, world!"
+    echo-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              run: |
+                  echo "Hello, world!"
+                  echo "Goodbye, world!"
+                  exit 1
+            - name: Checkout code
+              run: echo "Bye, world!"
