@@ -11,10 +11,9 @@ jobs:
     echo-goodbye:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout code
+            - name: successful step
               run: |
-                  echo "Hello, world!"
-                  echo "Goodbye, world!"
+                  echo "I will fail"
                   exit 1
-            - name: Checkout code
+            - name: say goodbye
               run: echo "Bye, world!"
