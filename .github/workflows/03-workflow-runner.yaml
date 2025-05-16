@@ -8,4 +8,4 @@ jobs:
             - name: Show OS
               run: |
                   echo "I am running on ${{ runner.os }}."
-                     echo "I am running on ${{ github.event_name }} event."
+                     echo "I am running on $RUNNER_OS."
