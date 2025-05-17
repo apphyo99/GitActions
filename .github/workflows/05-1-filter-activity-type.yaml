@@ -1,0 +1,18 @@
+name: 05-1-event-filtering
+
+on:
+    pull_request:
+        types: [opened, synchronize]
+        branches: [main]
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                  echo "I am running on ${{ runner.os }}."
+                  echo "I am running on $RUNNER_OS."
+                  echo "The event name is ${{ github.event_name }}."
+                  echo "The action is ${{ github.action }}."
+                  echo "The event type is ${{ github.event.action }}."
+                  echo "The event type is ${{ github.event_name }}"
