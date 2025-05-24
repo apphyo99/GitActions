@@ -1,0 +1,20 @@
+name: 06-contexts
+on: push
+
+jobs:
+    echo-data:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display information
+              run: |
+                  echo "I am running on ${{ runner.os }}."
+                    echo "Event name: ${{ github.event_name }}"
+                    echo "Ref: ${{ github.ref }}"
+                    echo "SHA: ${{ github.sha }}"
+                    echo "Actor: ${{ github.actor  }}"
+                    echo "Run ID: ${{ github.run_id }}"
+                    echo "Run number: ${{ github.run_number }}"
+
+            - name: Retrieve Variable
+              run: |
+                  echo "The variable is ${{ var.MY_VAR }}"
